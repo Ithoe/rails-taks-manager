@@ -3,7 +3,11 @@
   <p><%=task.title%></p>
   <%=task.completed ? "[x]" : "[ ]"%>
   <%=task.details%>
-  <%=link_to "Find", task_path(task)%>
+  <%=link_to "See more", task_path(task)%>
+  <%=link_to "Edit", edit_task_path(task) %>
+<% end %>
+
+
 <%end%>
 
 <%= link_to "Create new task", new_task_path %>
