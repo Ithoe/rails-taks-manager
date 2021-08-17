@@ -5,9 +5,7 @@
   <%=task.details%>
   <%=link_to "See more", task_path(task)%>
   <%=link_to "Edit", edit_task_path(task) %>
+  <%=link_to "Delete", delete_task_path(task), method: :delete, data: {confirm: "Are you sure?"}  %>
 <% end %>
-
-
-<%end%>
 
 <%= link_to "Create new task", new_task_path %>
