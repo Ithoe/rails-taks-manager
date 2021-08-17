@@ -1,0 +1,9 @@
+<h1>To Do:</h1>
+<%@tasks.each do |task|%>
+  <p><%=task.title%></p>
+  <%=task.completed ? "[x]" : "[ ]"%>
+  <%=task.details%>
+  <%=link_to "Find", task_path(task)%>
+<%end%>
+
+<%= link_to "Create new task", new_task_path %>
